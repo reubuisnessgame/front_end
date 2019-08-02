@@ -1,0 +1,184 @@
+body {
+     background: #eee;
+     font-size: 1.2rem !important;
+ }
+footer {
+    margin-top: 60px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.butn_navmenu {
+    background: transparent;
+    border-radius: 15px !important;
+    border: 1px solid rgba(255,255,255,.5);
+    color: rgba(255,255,255,.5);
+    padding: 3px 20px;
+}
+.butn_navmenu:hover {
+    background: rgba(255,255,255,.5);
+    color: black;
+}
+.btn-form {
+    margin-top: 15px;
+}
+.h2_main_page {
+    margin-top: 20px;
+    text-align: center;
+}
+.foot_st {
+    margin-top: 3px;
+    padding: 25px ;
+}
+.moder_h3 {
+    /*text-align: center;*/
+    padding: 18px;
+}
+.butn_moder {
+    margin-top: 7px;
+    display: block;
+    padding: 5px 20px;
+    background: transparent;
+    border: 2px solid #eeeeee;
+    border-radius: 10px;
+    color: black;
+}
+.butn_moder:hover {
+    color: #00BCD4;
+}
+.butn_moder-win {
+    margin-top: 7px;
+    display: block;
+    padding: 5px 20px;
+    background: green;
+    border: 2px solid green;
+    border-radius: 10px;
+    color: black;
+}
+.butn_moder-win:hover {
+    color: white;
+}
+.butn_moder-lose {
+    margin-top: 7px;
+    display: block;
+    padding: 5px 20px;
+    background: #FF0033;
+    border: 2px solid #FF0033;
+    border-radius: 10px;
+    color: black;
+}
+.butn_moder-lose:hover {
+    color: white;
+}
+.card-main:last-child {
+    margin-bottom: 80px;
+}
+.moder_h6 {
+    color: black;
+}
+.card-bank {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Для чекбокса */
+
+$blue: rgb(41,182,246);
+
+.checkbox-wrapper{
+    display: inline-block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+input{
+    cursor: pointer;
+    height: 20px;
+    margin: 0px;
+    opacity: 0;
+    position: absolute;
+    width: 20px;
+    z-index: 2;
+
+&:active{
++ .checkbox{
+&:before{
+     height: 50px;
+     width: 50px;
+ }
+}
+}
+
+&:checked{
++ .checkbox{
+    border: 2px solid $blue;
+
+&:before{
+     animation: pulse 1s cubic-bezier(0.15, 0.8, 0.5, 1);
+ }
+
+&:after{
+     height: 20px;
+     opacity: 1;
+     width: 20px;
+ }
+}
+}
+}
+
+.checkbox{
+    border: 2px solid black;
+    border-radius: 2px;
+    height: 16px;
+    position: relative;
+    transition: all 0.5s;
+    width: 16px;
+
+&:before, &:after{
+               content: '';
+               left: 50%;
+               position: absolute;
+               top: 50%;
+               transform: translateX(-50%) translateY(-50%);
+               transition: all 0.5s;
+           }
+
+&:before{
+     background-color: rgba(242,242,242,0.9);
+     border-radius: 50%;
+     height: 5px;
+     width: 5px;
+     z-index: -1;
+ }
+
+&:after{
+     background-color: $blue;
+     border-radius: 2px;
+     height: 5px;
+     opacity: 0;
+     width: 5px;
+ }
+
+i{
+    color: white;
+    height: 18px;
+    left: 0px;
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    width: 18px;
+    z-index: 2;
+}
+}
+}
+
+@keyframes pulse{
+    0% {
+        box-shadow: 0 0 0 0px rgba($blue, 1);
+    }
+    100% {
+        box-shadow: 0 0 0 25px rgba(242,242,242, 0);
+    }
+}

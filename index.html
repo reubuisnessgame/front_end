@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Добро пожаловать</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/08dca06bfb.js"></script>
+    <!-- подключаем Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> -->
+    <script src="js/jquery.js"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">
+            <i style="font-size: 30px; color: #00BCD4" class="fas fa-landmark"></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="logo">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a href="Main%20page.html" class="mr-3 ml-5 nav-link">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a href="bank_page.html" class="mr-3 nav-link">Банк</a>
+                </li>
+                <li class="nav-item">
+                    <a href="exchange_page.html" class="mr-3 nav-link">Биржа</a>
+                </li>
+                <li class="nav-item">
+                    <a href="moderator_page.html" class="mr-3 nav-link">Личное</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Page_news.html" class="mr-3 nav-link">Новости</a>
+                </li>
+            </ul>
+
+            <button class="mr-5 butn_navmenu" data-toggle="modal" data-target="#regModal" >
+                Регистрация
+            </button>
+            <button class="mr-5 butn_navmenu" data-toggle="modal" data-target="#exampleModal" >
+                Авторизация
+            </button>
+
+
+
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="container">
+            <div style="margin-top: 3px; text-align: center;" class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Добро пожаловать в игру!</h4>
+
+                </div>
+            </div>
+            <div class="card card-main">
+                <div class="card-body">
+                    <h4 class="card-title">Шаг 1. Зарегистрируй команду</h4>
+                    <p class="card-text">
+                        Подойди и зарегистрируй группу у администратора
+                    </p>
+                </div>
+            </div>
+            <div class="card card-main">
+                <div class="card-body">
+                    <h4 class="card-title">Шаг 2. Пройди пару станций</h4>
+                    <p class="card-text">
+                        Пройди пару станций
+                    </p>
+                </div>
+            </div>
+            <div class="card card-main">
+                <div class="card-body">
+                    <h4 class="card-title">Шаг 3. Купи акций</h4>
+                    <p class="card-text">
+                        Купи, а то чё как лох то!
+                    </p>
+                </div>
+            </div>
+            <div class="card card-main">
+                <div class="card-body">
+                    <h4 class="card-title">Шаг 4. Продай акции</h4>
+                    <p class="card-text">
+                        Да! Продай их! Только не просто так, а с выгодой!
+                    </p>
+                </div>
+            </div>
+            <div class="card card-main">
+                <div class="card-body">
+                    <h4 class="card-title">Шаг 5. Шагай</h4>
+                    <p class="card-text">
+                        Давай, иди!
+                    </p>
+                </div>
+            </div>
+            <div class="card card-main">
+                <div class="card-body">
+                    <h4 class="card-title">Шаг 5. Шагай</h4>
+                    <p class="card-text">
+                        Давай, иди!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Форма Авторизации -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Авторизация</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                                <label for="exampleInputEmail">Ваш логин</label>
+                                <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" required placeholder="Логин">
+                                    <small id="emailHelp" class="form-text text-muted">Введите ваш логин</small>
+                                <label for="exampleInputPass">Пароль</label>
+                                <input type="email" class="form-control" id="exampleInputPass" aria-describedby="passHelp" required placeholder="Пароль">
+                                    <small id="emailHelp" class="form-text text-muted">Введите ваш пароль</small>
+                                <button type="submit" class="btn btn-primary btn-form">
+                                Отправить
+                                </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Форма Регистрации -->
+
+    <div class="modal fade" id="regModal" tabindex="-1" role="dialog" aria-labelledby="regModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="regModalLabel">Регистрация (только для администраторов)</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form id="formRegistration">
+                            <div class="form-froup">
+                                <label for="exampleInputLogin">Ваш логин</label>
+                                <input name="login" type="text" class="form-control" id="regInputLogin" placeholder="Логин">
+                            </div>
+                            <div class="form-froup">
+                                <label for="exampleInputPass">Пароль</label>
+                                <input name="pass" type="text" class="form-control" id="exampleInputPass" placeholder="Пароль">
+                            </div>
+                            <div id="result-block"></div>
+                            <div class="form-froup">
+                                <label for="exampleInputPass">Ваша роль</label>
+                                <p>
+                                    <select id="select-regestr" style="width:100%"  size="3" name="game_role">
+                                        <option disabled>Выберите роль</option>
+                                        <option value="Модератор">Модератор</option>
+                                        <option selected value="Ведущий" >Ведущий</option>
+                                        <option value="Биржа">Биржа</option>
+                                    </select>
+                                </p>
+
+                                <!--<input type="email" class="form-control" id="exampleInputPass" aria-describedby="passHelp" placeholder="Пароль"> -->
+                            </div>
+                            <div class="form-froup">
+                                <label for="exampleInputPass">Кол-во очков</label>
+                                <input type="number" class="form-control" id="exampleInputPass" aria-describedby="passHelp" placeholder="Кол-во очков">
+                            </div>
+                            <div class="form-froup">
+                                <label for="exampleInputPass">Коэффициент</label>
+                                <input type="number" class="form-control" id="exampleInputPass" aria-describedby="passHelp" placeholder="Коэффициент">
+                            </div> 
+                            <button type="submit" class="btn btn-primary btn-form">
+                                Отправить
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- подключаем JavaScript -->
+<!-- подключаем jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <footer class="bg-dark foot_st">
+        <div class="contaier-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+
+                    </div>
+                    <div class="col-sm-4">
+                        <h5>8-800-555-35-35<h5>
+                    </div>
+                    <div class="col-sm-4">
+                        <h5>Сеня и Макс Компани</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js/script.js"></script>
+</html>
