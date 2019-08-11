@@ -38,13 +38,16 @@
                     <a href="Page_news.html" class="mr-3 nav-link">Новости</a>
                 </li>
             </ul>
+                <button class="mr-5 butn_navmenu" data-toggle="modal" data-target="#regModal" >
+                    Регистрация
+                </button>
 
-            <button class="mr-5 butn_navmenu" data-toggle="modal" data-target="#regModal" >
-                Регистрация
-            </button>
-            <button class="mr-5 butn_navmenu" data-toggle="modal" data-target="#exampleModal" >
-                Авторизация
-            </button>
+                <button class="mr-5 butn_navmenu" data-toggle="modal" data-target="#exampleModal" >
+                    Авторизация
+                </button>
+
+            
+            
 
 
 
@@ -126,11 +129,9 @@
                     <div class="container-fluid">
                         <form>
                                 <label for="exampleInputEmail">Ваш логин</label>
-                                <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" required placeholder="Логин">
-                                    <small id="emailHelp" class="form-text text-muted">Введите ваш логин</small>
+                                <input type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" required placeholder="Логин">
                                 <label for="exampleInputPass">Пароль</label>
-                                <input type="email" class="form-control" id="exampleInputPass" aria-describedby="passHelp" required placeholder="Пароль">
-                                    <small id="emailHelp" class="form-text text-muted">Введите ваш пароль</small>
+                                <input type="text" class="form-control" id="exampleInputPass" aria-describedby="passHelp" required placeholder="Пароль">
                                 <button type="submit" class="btn btn-primary btn-form">
                                 Отправить
                                 </button>
@@ -157,11 +158,11 @@
                         <form id="formRegistration">
                             <div class="form-froup">
                                 <label for="exampleInputLogin">Ваш логин</label>
-                                <input name="login" type="text" class="form-control" id="regInputLogin" placeholder="Логин">
+                                <input name="login" type="text" class="form-control" id="regInputLogin" placeholder="Логин" required>
                             </div>
                             <div class="form-froup">
                                 <label for="exampleInputPass">Пароль</label>
-                                <input name="pass" type="text" class="form-control" id="exampleInputPass" placeholder="Пароль">
+                                <input name="pass" type="text" class="form-control" id="exampleInputPass" placeholder="Пароль" required>
                             </div>
                             <div id="result-block"></div>
                             <div class="form-froup">
@@ -179,11 +180,11 @@
                             </div>
                             <div class="form-froup">
                                 <label for="exampleInputPass">Кол-во очков</label>
-                                <input type="number" class="form-control" id="exampleInputPass" aria-describedby="passHelp" placeholder="Кол-во очков">
+                                <input type="number" class="form-control" id="exampleInputPass" aria-describedby="passHelp" placeholder="Кол-во очков" required>
                             </div>
                             <div class="form-froup">
                                 <label for="exampleInputPass">Коэффициент</label>
-                                <input type="number" class="form-control" id="exampleInputPass" aria-describedby="passHelp" placeholder="Коэффициент">
+                                <input type="number" class="form-control" id="exampleInputPass" aria-describedby="passHelp" placeholder="Коэффициент" required>
                             </div> 
                             <button type="submit" class="btn btn-primary btn-form">
                                 Отправить
