@@ -1,318 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Банк</title>
-    <meta charset="utf-8">
+    <title>Добро пожаловать</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://kit.fontawesome.com/08dca06bfb.js"></script>
     <!-- подключаем Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
-
-
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> -->
+    <script src="scripts/config.js"></script>
 </head>
+
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a href="#" class="navbar-brand">
-        <i style="font-size: 30px; color: #00BCD4" class="fas fa-landmark"></i>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="logo">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="navbar navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a href="#" class="mr-3 ml-5 nav-link">Главная</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="mr-3 nav-link">Банк</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="mr-3 nav-link">Биржа</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="mr-3 nav-link">Личное</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="mr-3 nav-link">Новости</a>
-            </li>
-        </ul>
-
-        <button class="mr-5 butn_navmenu" data-toggle="modal" data-target="#regModal" >
-            Регистрация
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">
+            <i style="font-size: 30px; color: #00BCD4" class="fas fa-landmark"></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="logo">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <button class="mr-5 butn_navmenu" data-toggle="modal" data-target="#exampleModal" >
-            Авторизация
-        </button>
+        <div class="navbar navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="index.html" class="mr-3 ml-5 nav-link">Главная</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="bank_page.html" class="mr-3 nav-link">Банк</a>
+                </li>
+                <li class="nav-item">
+                    <a href="exchange_page.html" class="mr-3 nav-link">Биржа</a>
+                </li>
+                <li class="nav-item">
+                    <a href="moderator_page.html" class="mr-3 nav-link">Личное</a>
+                </li>
+                <li class="nav-item">
+                    <a href="page_news.html" class="mr-3 nav-link">Новости</a>
+                </li>
+            </ul>
+            <button class="mr-5 butn_navmenu" data-toggle="modal" data-target="#regModal">
+                Регистрация
+            </button>
 
-
-
-    </div>
-</nav>
+            <button class="mr-5 butn_navmenu" data-toggle="modal" data-target="#exampleModal">
+                Авторизация
+            </button>
+        </div>
+    </nav>
 
     <div class="container">
         <h3 class="moder_h3">Страница Банка</h3>
 
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Действия в банке </h4>
-                        <h6 class="moder_h6">Что бы проводить операции в банке, вы должны быть зарегистрированны!</h6>
-                        <hr>
-                        <button class="butn_moder" data-toggle="modal" data-target="#takeModal" >
-                            Взять кредит
-                        </button>
-                        <hr>
-                        <button class="butn_moder" data-toggle="modal" data-target="#open-dep-Modal" >
-                            Открыть депозит
-                        </button>
-                        <hr>
-                        <button class="butn_moder" data-toggle="modal" data-target="#put-dep-Modal" >
-                            Погасить кредит
-                        </button>
-                        <hr>
-                        <button class="butn_moder" data-toggle="modal" data-target="#out-money-Modal" >
-                            Вывести с депозита
-                        </button>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Действия в банке </h4>
+                <h6 class="moder_h6">Что бы проводить операции в банке, вы должны быть зарегистрированны!</h6>
+                <hr>
+                <button class="butn_moder" data-toggle="modal" data-target="#takeModal">
+                    Взять кредит
+                </button>
+                <hr>
+                <button class="butn_moder" data-toggle="modal" data-target="#open-dep-Modal">
+                    Открыть депозит
+                </button>
+                <hr>
+                <button class="butn_moder" data-toggle="modal" data-target="#put-dep-Modal">
+                    Погасить кредит
+                </button>
+                <hr>
+                <button class="butn_moder" data-toggle="modal" data-target="#out-money-Modal">
+                    Вывести с депозита
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Форма Авторизации -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Авторизация</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <label for="exampleInputEmail">Ваш логин</label>
+                            <input type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"
+                                required placeholder="Логин">
+                            <label for="exampleInputPass">Пароль</label>
+                            <input type="text" class="form-control" id="exampleInputPass" aria-describedby="passHelp"
+                                required placeholder="Пароль">
+                            <button type="submit" class="btn btn-primary btn-form">
+                                Отправить
+                            </button>
+                        </form>
                     </div>
                 </div>
-
-    </div>
-
-<!-- Форма Авторизации -->
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Авторизация</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-
             </div>
-            <div class="modal-body">
-                <div class="container-fluid">
-                    <form>
-                        <label for="exampleInputEmail">Ваш логин</label>
-                        <input type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" required placeholder="Логин">
-                        <label for="exampleInputPass">Пароль</label>
-                        <input type="text" class="form-control" id="exampleInputPass" aria-describedby="passHelp" required placeholder="Пароль">
-                        <button type="submit" class="btn btn-primary btn-form">
-                            Отправить
-                        </button>
-                    </form>
+        </div>
+    </div>
+    <!-- Форма Регистрации -->
+
+    <div class="modal fade" id="regModal" tabindex="-1" role="dialog" aria-labelledby="regModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="regModalLabel">Регистрация (только для администраторов)</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form id="formRegistration">
+                            <div class="form-froup">
+                                <label for="exampleInputLogin">Ваш логин</label>
+                                <input name="login" type="text" class="form-control" id="regInputLogin"
+                                    placeholder="Логин" required>
+                            </div>
+                            <div class="form-froup">
+                                <label for="exampleInputPass">Пароль</label>
+                                <input name="pass" type="text" class="form-control" id="exampleInputPass"
+                                    placeholder="Пароль" required>
+                            </div>
+                            <div id="result-block"></div>
+                            <div class="form-froup">
+                                <label for="exampleInputPass">Ваша роль</label>
+                                <p>
+                                    <select id="select-regestr" style="width:100%" size="3" name="game_role">
+                                        <option disabled>Выберите роль</option>
+                                        <option value="Модератор">Модератор</option>
+                                        <option selected value="Ведущий">Ведущий</option>
+                                        <option value="Биржа">Биржа</option>
+                                    </select>
+                                </p>
+
+                                <!--<input type="email" class="form-control" id="exampleInputPass" aria-describedby="passHelp" placeholder="Пароль"> -->
+                            </div>
+                            <div class="form-froup">
+                                <label for="exampleInputPass">Кол-во очков</label>
+                                <input type="number" class="form-control" id="exampleInputPass"
+                                    aria-describedby="passHelp" placeholder="Кол-во очков" required>
+                            </div>
+                            <div class="form-froup">
+                                <label for="exampleInputPass">Коэффициент</label>
+                                <input type="number" class="form-control" id="exampleInputPass"
+                                    aria-describedby="passHelp" placeholder="Коэффициент" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-form">
+                                Отправить
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Форма Регистрации -->
 
-<div class="modal fade" id="regModal" tabindex="-1" role="dialog" aria-labelledby="regModal" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="regModalLabel">Регистрация (только для администраторов)</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+    <!-- Форма Взять кредит -->
 
-            </div>
-            <div class="modal-body">
-                <div class="container-fluid">
-                    <form id="formRegistration">
-                        <div class="form-froup">
-                            <label for="exampleInputLogin">Ваш логин</label>
-                            <input name="login" type="text" class="form-control" id="regInputLogin" placeholder="Логин" required>
-                        </div>
-                        <div class="form-froup">
-                            <label for="exampleInputPass">Пароль</label>
-                            <input name="pass" type="text" class="form-control" id="exampleInputPass" placeholder="Пароль" required>
-                        </div>
-                        <div id="result-block"></div>
-                        <div class="form-froup">
-                            <label for="exampleInputPass">Ваша роль</label>
-                            <p>
-                                <select id="select-regestr" style="width:100%"  size="3" name="game_role">
-                                    <option disabled>Выберите роль</option>
-                                    <option value="Модератор">Модератор</option>
-                                    <option selected value="Ведущий" >Ведущий</option>
-                                    <option value="Биржа">Биржа</option>
-                                </select>
-                            </p>
+    <div class="modal fade" id="takeModal" tabindex="-1" role="dialog" aria-labelledby="takeModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="takeModalLabel">Взять кредит</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
 
-                            <!--<input type="email" class="form-control" id="exampleInputPass" aria-describedby="passHelp" placeholder="Пароль"> -->
-                        </div>
-                        <div class="form-froup">
-                            <label for="exampleInputPass">Кол-во очков</label>
-                            <input type="number" class="form-control" id="exampleInputPass" aria-describedby="passHelp" placeholder="Кол-во очков" required>
-                        </div>
-                        <div class="form-froup">
-                            <label for="exampleInputPass">Коэффициент</label>
-                            <input type="number" class="form-control" id="exampleInputPass" aria-describedby="passHelp" placeholder="Коэффициент" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-form">
-                            Отправить
-                        </button>
-                    </form>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-froup">
+                                <input type="number" class="form-control" id="exampleInputNumber"
+                                    aria-describedby="numberHelp" required placeholder="Сумма">
+                                <small id="numberHelp" class="form-text text-muted">Введите сумму кредита
 
-<!-- Форма Взять кредит -->
-
-<div class="modal fade" id="takeModal" tabindex="-1" role="dialog" aria-labelledby="takeModal" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="takeModalLabel">Взять кредит</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-
-            </div>
-            <div class="modal-body">
-                <div class="container-fluid">
-                    <form>
-                        <div class="form-froup">
-                            <input type="number" class="form-control" id="exampleInputNumber" aria-describedby="numberHelp" required placeholder="Сумма">
-                            <small id="numberHelp" class="form-text text-muted">Введите сумму кредита
-
-                            </small>
-                            <div class="card card-bank">
-                                <div class="card-body">
-                                    <p class="card-text">
-                                        На сумму кредита будет начисляться 25% от суммы кредита на данный момент. Раз в десять минут.
-                                    </p>
+                                </small>
+                                <div class="card card-bank">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            На сумму кредита будет начисляться 25% от суммы кредита на данный момент.
+                                            Раз в десять минут.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <button type="submit" class="btn btn-primary btn-form">
-                            Взять кредит
-                        </button>
-                    </form>
+                            <button type="submit" class="btn btn-primary btn-form">
+                                Взять кредит
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Форма Открыть депозит -->
+    <!-- Форма Открыть депозит -->
 
-<div class="modal fade" id="open-dep-Modal" tabindex="-1" role="dialog" aria-labelledby="open-dep-Modal" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="open-dep-ModalLabel">Внести у.е. на депозит</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+    <div class="modal fade" id="open-dep-Modal" tabindex="-1" role="dialog" aria-labelledby="open-dep-Modal"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="open-dep-ModalLabel">Внести у.е. на депозит</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
 
-            </div>
-            <div class="modal-body">
-                <div class="container-fluid">
-                    <form>
-                        <div class="form-froup">
-                            <input type="number" class="form-control" id="exampleInputNumber" aria-describedby="numberHelp" required placeholder="Сумма">
-                            <small id="numberHelp" class="form-text text-muted">Введите сумму
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-froup">
+                                <input type="number" class="form-control" id="exampleInputNumber"
+                                    aria-describedby="numberHelp" required placeholder="Сумма">
+                                <small id="numberHelp" class="form-text text-muted">Введите сумму
 
-                            </small>
-                            <div class="card card-bank">
-                                <div class="card-body">
-                                    <p class="card-text">
-                                        На сумму депозита будет начисляться 10%, каждые 10 минут.
-                                    </p>
+                                </small>
+                                <div class="card card-bank">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            На сумму депозита будет начисляться 10%, каждые 10 минут.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-form">
-                            Внести
-                        </button>
-                    </form>
+                            <button type="submit" class="btn btn-primary btn-form">
+                                Внести
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Форма Погасить кредит -->
+    <!-- Форма Погасить кредит -->
 
-<div class="modal fade" id="put-dep-Modal" tabindex="-1" role="dialog" aria-labelledby="put-dep-Modal" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="put-dep-ModalLabel">Погасить кредит</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+    <div class="modal fade" id="put-dep-Modal" tabindex="-1" role="dialog" aria-labelledby="put-dep-Modal"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="put-dep-ModalLabel">Погасить кредит</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
 
-            </div>
-            <div class="modal-body">
-                <div class="container-fluid">
-                    <form>
-                        <div class="form-froup">
-                            <input type="number" class="form-control" id="exampleInputNumber" aria-describedby="numberHelp" required placeholder="Сумма">
-                            <small id="numberHelp" class="form-text text-muted">Введите сумму
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-froup">
+                                <input type="number" class="form-control" id="exampleInputNumber"
+                                    aria-describedby="numberHelp" required placeholder="Сумма">
+                                <small id="numberHelp" class="form-text text-muted">Введите сумму
 
-                            </small>
-                            <div class="card card-bank">
-                                <div class="card-body">
-                                    <p class="card-text">
-                                        Погашение кредита.
-                                    </p>
+                                </small>
+                                <div class="card card-bank">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Погашение кредита.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-form">
-                            Погасить
-                        </button>
-                    </form>
+                            <button type="submit" class="btn btn-primary btn-form">
+                                Погасить
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Форма Вывесит у.е. с депозита -->
+    <!-- Форма Вывесит у.е. с депозита -->
 
-<div class="modal fade" id="out-money-Modal" tabindex="-1" role="dialog" aria-labelledby="out-money-Modal" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="out-money-  ModalLabel">Вывод с депозита</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+    <div class="modal fade" id="out-money-Modal" tabindex="-1" role="dialog" aria-labelledby="out-money-Modal"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="out-money-  ModalLabel">Вывод с депозита</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
 
-            </div>
-            <div class="modal-body">
-                <div class="container-fluid">
-                    <form>
-                        <div class="form-froup">
-                            <input type="number" class="form-control" id="exampleInputNumber" aria-describedby="numberHelp" required placeholder="Сумма">
-                            <small id="numberHelp" class="form-text text-muted">Введите сумму
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-froup">
+                                <input type="number" class="form-control" id="exampleInputNumber"
+                                    aria-describedby="numberHelp" required placeholder="Сумма">
+                                <small id="numberHelp" class="form-text text-muted">Введите сумму
 
-                            </small>
-                            <div class="card card-bank">
-                                <div class="card-body">
-                                    <p class="card-text">
-                                        Вывод денег на баланс с депозита.
-                                    </p>
+                                </small>
+                                <div class="card card-bank">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Вывод денег на баланс с депозита.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-form">
-                            Вывести
-                        </button>
-                    </form>
+                            <button type="submit" class="btn btn-primary btn-form">
+                                Вывести
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 </body>
 <footer class="bg-dark foot_st">
@@ -331,8 +347,15 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </footer>
+
 </html>
