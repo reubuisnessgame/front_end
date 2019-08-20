@@ -1,13 +1,16 @@
 $('#authForm').submit(function (event) {
     event.preventDefault();
     var requestData = JSON.stringify({
-        login: $('#exampleInputEmail').val(),
+        username: $('#exampleInputEmail').val(),
         password: $('#exampleInputPass').val()
     });
-    $.post(config.authService + '/login/admin/',
-        requestData,
-        function (data) {
+    $.ajax({
+        url: config.authService + '/login/admin/',
+        type: 'POST',
+        data: requestData,
+        dataType: 'json',
+        success: function (data) {
             console.log(data);
         }
-    );
+    });
 });
