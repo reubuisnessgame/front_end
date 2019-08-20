@@ -1,10 +1,10 @@
 var development = {
-    authService: 'http://localhost:9991',
-    stockExchangeService: 'http://localhost:9994',
-    teamService: 'http://localhost:9993',
-    problemService: 'http://localhost:9995',
-    fileService: 'http://localhost:9996',
-    adminService: 'http://localhost:9992',
+    authService: 'http://92.53.67.78:8080/authservice-0.9-BETA',
+    stockExchangeService: 'http://92.53.67.78:8080/stockexchangeservice-0.9-BETA',
+    teamService: 'http://92.53.67.78:8080/teamservice-0.9-BETA',
+    problemService: 'http://92.53.67.78:8080/problemservice-0.9-BETA',
+    fileService: 'http://92.53.67.78:8080/fileservice-0.9-BETA',
+    adminService: 'http://92.53.67.78:8080/adminservice-0.9-BETA',
 };
 
 var production = {
