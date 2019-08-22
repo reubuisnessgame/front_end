@@ -9,8 +9,11 @@ $('#authForm').submit(function (event) {
         type: 'POST',
         data: requestData,
         contentType: "application/json; charset=utf-8",
-        success: function (data) {
-            console.log(data);
+        success: function (response) {
+            sessionStorage.setItem('role', response.role);
+            sessionStorage.setItem('username', response.username);
+            sessionStorage.setItem('token', response.token);
+            location.replace('index.html');
         }
     });
 });

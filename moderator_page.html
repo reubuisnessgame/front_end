@@ -16,7 +16,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="#" class="navbar-brand">
+        <a href="index.html" class="navbar-brand ml-3">
             <i style="font-size: 30px; color: #00BCD4" class="fas fa-landmark"></i>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -26,7 +26,7 @@
         <div class="navbar navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a href="index.html" class="mr-3 ml-5 nav-link">Главная</a>
+                    <a href="index.html" class="mr-3 nav-link">Главная</a>
                 </li>
                 <li class="nav-item">
                     <a href="bank_page.html" class="mr-3 nav-link">Банк</a>
@@ -42,15 +42,9 @@
                 </li>
             </ul>
 
-            <button class="mr-5 butn_navmenu" data-toggle="modal" data-target="#regModal">
-                Регистрация
-            </button>
             <button class="mr-5 butn_navmenu" data-toggle="modal" data-target="#exampleModal">
                 Авторизация
             </button>
-
-
-
         </div>
     </nav>
 
@@ -64,6 +58,9 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Активные действия: </h4>
+                        <button class="butn_moder" data-toggle="modal" data-target="#regModal">
+                            Регистрация нового модератора
+                        </button>
                         <button class="butn_moder" data-toggle="modal" data-target="#newteamModal">
                             Создать новую команду
                         </button>
@@ -81,11 +78,11 @@
                         </button>
                         <hr>
                         <h4 class="card-title">Если Модератор на станции: </h4>
-                        <button class="butn_moder" data-toggle="modal" data-target="#exampleModal">
-                            Заблокировать ставку на время прохождения станции
+                        <button class="butn_moder" id="leadPageButton">
+                            Личная страница ведущего станции
                         </button>
-                        <button class="butn_moder" data-toggle="modal" data-target="#exampleModal">
-                            Снять либо добавить ставку по итогам прохождения станции
+                        <button class="butn_moder" id="exchangeWorkerPage">
+                            Личная страница работника биржи
                         </button>
                     </div>
                 </div>
@@ -156,7 +153,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="regModalLabel">Регистрация (только для администраторов)</h5>
+                    <h5 class="modal-title" id="regModalLabel">Регистрация нового модератора</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -422,26 +419,6 @@
             </div>
         </div>
     </div>
-
-
-
-</body>
-<footer class="bg-dark foot_st">
-    <div class="contaier-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4">
-
-                </div>
-                <div class="col-sm-4">
-                    <h5>8-800-555-35-35<h5>
-                </div>
-                <div class="col-sm-4">
-                    <h5>Сеня и Макс Компани</h5>
-                </div>
-            </div>
-        </div>
-    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -450,6 +427,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-</footer>
+</body>
 
 </html>
