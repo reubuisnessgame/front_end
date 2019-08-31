@@ -5,7 +5,7 @@ $(document).ready(function () {
     }
 
     let role = sessionStorage.getItem('role');
-    if (role !== 'LEADING') {
+    if (role !== 'LEADING' && role !== 'MODERATOR') {
         location.replace('permission_required.html');
         return;
     }
@@ -15,16 +15,17 @@ $(document).ready(function () {
 
         var teamNumber = $('#NewsHeader').val();
         var rate = $('#NewsText').val();
-        var scoreData = {
+        var scoreData = JSON.stringify({
             rate: rate,
             teamNumber: teamNumber,
             isWin: false
-        };
+        });
         $.ajax({
             url: config.adminService + '/admin/block_scr',
             type: 'POST',
             crossDomain: true,
             data: scoreData,
+            dataType: 'json',
             contentType: 'application/json',
             headers: {
                 'Authorization': 'Bearer ' + sessionStorage.getItem('token')
@@ -37,16 +38,17 @@ $(document).ready(function () {
     });
 
     $('#win').click(function () {
-        var scoreData = {
+        var scoreData = JSON.stringify({
             rate: sessionStorage.getItem('rate'),
             teamNumber: sessionStorage.getItem('teamNumber'),
             isWin: true
-        };
+        });
         $.ajax({
             url: config.adminService + '/admin/add_scr',
             type: 'POST',
             crossDomain: true,
             data: scoreData,
+            dataType: 'json',
             contentType: 'application/json',
             headers: {
                 'Authorization': 'Bearer ' + sessionStorage.getItem('token')
@@ -58,16 +60,17 @@ $(document).ready(function () {
     });
 
     $('#lose').click(function () {
-        var scoreData = {
+        var scoreData = JSON.stringify({
             rate: sessionStorage.getItem('rate'),
             teamNumber: sessionStorage.getItem('teamNumber'),
             isWin: false
-        };
+        });
         $.ajax({
             url: config.adminService + '/admin/add_scr',
             type: 'POST',
             crossDomain: true,
             data: scoreData,
+            dataType: 'json',
             contentType: 'application/json',
             headers: {
                 'Authorization': 'Bearer ' + sessionStorage.getItem('token')
