@@ -25,3 +25,25 @@ $(document).ready(function () {
         location.replace('auth_required.html');
     }
 });
+
+
+$('#newsModal').submit($('#authForm').submit(function (event) {
+    event.preventDefault();
+    var requestData = JSON.stringify({
+        companyName: $('#CompanyName').val(),
+        changingPrice: $('#NewsChangingCourse').val(),
+        heading: $('#NewsHeader').val(),
+        article: $('#NewsText').val()
+
+    });
+    $.ajax({
+        url: config.stockExchangeService + '/change',
+        type: 'POST',
+        data: requestData,
+        contentType: "application/json; charset=utf-8",
+        success: function (response) {
+            console.log("Success");
+            location.replace('index.html');
+        }
+    });
+}))
