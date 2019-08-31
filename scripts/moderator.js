@@ -124,7 +124,7 @@ $(document).ready(function () {
         });
     });
     
-    $('[data-target="#sendNewsButton"]').click(function (event) {
+    $('#sendNewsButton1').click(function (event) {
         event.preventDefault();
         var requestData = JSON.stringify({
             companyName: $('#CompanyName').val(),
@@ -142,8 +142,7 @@ $(document).ready(function () {
                 'Authorization': 'Bearer ' + sessionStorage.getItem('token')
             },
             success: function (response) {
-                console.log("Success");
-                location.replace('index.html');
+                console.log("Success" + response.data);
             }
         });
     });
