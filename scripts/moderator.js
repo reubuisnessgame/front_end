@@ -65,4 +65,29 @@ $(document).ready(function () {
     $('#exchangeWorkerPage').click(function () {
         location.replace('exchange_worker_page.html');
     });
+
+    $('[data-target="#sendNewsButton"]').click(function (event) {
+        event.preventDefault();
+        var requestData = JSON.stringify({
+            companyName: $('#CompanyName').val(),
+            changingPrice: $('#NewsChangingCourse').val(),
+            heading: $('#NewsHeader').val(),
+            article: $('#NewsText').val()
+
+        });
+        $.ajax({
+            url: config.stockExchangeService + '/stock/change',
+            type: 'POST',
+            data: requestData,
+            contentType: "application/json; charset=utf-8",
+            headers: {
+                'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+            },
+            success: function (response) {
+                console.log("Success");
+                location.replace('index.html');
+            }
+        });
+    });
 });
+
