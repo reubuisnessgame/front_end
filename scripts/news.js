@@ -13,7 +13,12 @@ $(document).ready(function () {
                         return `
                             <div class="card">
                                 <div class="card-body">
-
+                                    <h4 class="col-12">
+                                        ${news.heading}
+                                    </h4>
+                                    <span class="col-12">
+                                        ${news.article}
+                                    </span>
                                 </div>
                             </div>
                         `;
