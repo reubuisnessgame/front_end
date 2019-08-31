@@ -28,9 +28,23 @@ $(document).ready(function () {
         }
     });
 
+    var isGameStarted = localStorage.getItem('isGameStarted');
+    if(isGameStarted){
+        $('[data-target="#start-game-btn"]').text('Остановить игру');
+    } else {
+        $('[data-target="#start-game-btn"]').text('Начать игру');
+    }
+
     $('[data-target="#start-game-btn"]').click(function () {
+        var gameStartOrStopUrl = '/admin/game?start=true';
+        var gameStatus = true;
+        if(isGameStarted){
+            gameStartOrStopUrl = '/admin/game?start=false';
+            gameStatus = false;
+        }
+
         $.ajax({
-            url: config.adminService + '/admin/game?start=true',
+            url: config.adminService + gameStartOrStopUrl,
             type: 'POST',
             crossDomain: true,
             contentType: "application/json",
@@ -38,7 +52,7 @@ $(document).ready(function () {
                 'Authorization': 'Bearer ' + sessionStorage.getItem('token')
             },
             success: function () {
-
+                localStorage.setItem('isGameStarted', gameStatus);
             }
         });
     });
