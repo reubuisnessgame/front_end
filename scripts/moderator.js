@@ -164,7 +164,7 @@ $(document).ready(function () {
                 $('#teamInfoContainer').append(function () {
                     return `
                         <div class="card col-12">
-                            <div class="card-body">
+                            <div class="card-body row">
                                 <span class="col-12">
                                     Номер команды: ${teamInfo.teamNumber}
                                 </span>
@@ -177,7 +177,7 @@ $(document).ready(function () {
                                 <span class="col-12">
                                     Кредит: ${teamInfo.credit}
                                 </span>
-                                <span>
+                                <span class="col-12">
                                     Депозит: ${teamInfo.deposit}
                                 </span>
                             </div>
