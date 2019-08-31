@@ -35,13 +35,13 @@
                     <a href="exchange_page.html" class="mr-3 nav-link">Биржа</a>
                 </li>
                 <li class="nav-item">
-                    <a href="moderator_page.html" class="mr-3 nav-link">Личное</a>
+                    <a href="account.html" class="mr-3 nav-link">Личное</a>
                 </li>
                 <li class="nav-item">
                     <a href="page_news.html" class="mr-3 nav-link">Новости</a>
                 </li>
             </ul>
-            
+
 
             <button class="mr-5 butn_navmenu" data-toggle="modal" data-target="#exampleModal">
                 Авторизация
@@ -55,7 +55,6 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Действия в банке </h4>
-                <h6 class="moder_h6">Что бы проводить операции в банке, вы должны быть зарегистрированны!</h6>
                 <hr>
                 <button class="butn_moder" data-toggle="modal" data-target="#takeModal">
                     Взять кредит
@@ -74,7 +73,6 @@
                 </button>
             </div>
         </div>
-
     </div>
 
     <!-- Форма Авторизации -->
@@ -181,9 +179,9 @@
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <form>
+                        <form id="takeCreditForm">
                             <div class="form-froup">
-                                <input type="number" class="form-control" id="exampleInputNumber"
+                                <input type="number" class="form-control amount-input"
                                     aria-describedby="numberHelp" required placeholder="Сумма">
                                 <small id="numberHelp" class="form-text text-muted">Введите сумму кредита
 
@@ -196,6 +194,10 @@
                                         </p>
                                     </div>
                                 </div>
+                                <span class="success-hint text-success">
+                                    Кредит был успешно назначен
+                                </span>
+
                             </div>
 
                             <button type="submit" class="btn btn-primary btn-form">
@@ -223,9 +225,9 @@
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <form>
+                        <form id="makeDepositForm">
                             <div class="form-froup">
-                                <input type="number" class="form-control" id="exampleInputNumber"
+                                <input type="number" class="form-control amount-input"
                                     aria-describedby="numberHelp" required placeholder="Сумма">
                                 <small id="numberHelp" class="form-text text-muted">Введите сумму
 
@@ -237,6 +239,9 @@
                                         </p>
                                     </div>
                                 </div>
+                                <span class="success-hint text-success">
+                                    Сумма успешно внесена на депозит
+                                </span>
                             </div>
                             <button type="submit" class="btn btn-primary btn-form">
                                 Внести
@@ -263,9 +268,9 @@
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <form>
+                        <form id="repayLoanForm">
                             <div class="form-froup">
-                                <input type="number" class="form-control" id="exampleInputNumber"
+                                <input type="number" class="form-control amount-input"
                                     aria-describedby="numberHelp" required placeholder="Сумма">
                                 <small id="numberHelp" class="form-text text-muted">Введите сумму
 
@@ -277,6 +282,9 @@
                                         </p>
                                     </div>
                                 </div>
+                                <span class="success-hint text-success">
+                                    Вы успешно погасили кредит
+                                </span>
                             </div>
                             <button type="submit" class="btn btn-primary btn-form">
                                 Погасить
@@ -303,9 +311,9 @@
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <form>
+                        <form id="withdrawalForm">
                             <div class="form-froup">
-                                <input type="number" class="form-control" id="exampleInputNumber"
+                                <input type="number" class="form-control amount-input"
                                     aria-describedby="numberHelp" required placeholder="Сумма">
                                 <small id="numberHelp" class="form-text text-muted">Введите сумму
 
@@ -317,6 +325,9 @@
                                         </p>
                                     </div>
                                 </div>
+                                <span class="success-hint text-success">
+                                    Вы успешно вывели деньги с депозита
+                                </span>
                             </div>
                             <button type="submit" class="btn btn-primary btn-form">
                                 Вывести
@@ -335,6 +346,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="scripts/bank.js"></script>
 </body>
 
 </html>

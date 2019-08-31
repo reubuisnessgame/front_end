@@ -8,7 +8,8 @@ $('#authForm').submit(function (event) {
         url: config.authService + '/login/admin/',
         type: 'POST',
         data: requestData,
-        contentType: "application/json; charset=utf-8",
+        crossDomain: true,
+        contentType: "application/json",
         success: function (response) {
             sessionStorage.setItem('role', response.role);
             sessionStorage.setItem('username', response.username);

@@ -1,12 +1,24 @@
 $(document).ready(function () {
     if (sessionStorage.getItem('token')) {
         $.ajax({
-            url: config.stockExchangeService + '/news',
+            url: config.stockExchangeService + '/stock/news',
             type: 'GET',
-            contentType: "application/json; charset=utf-8",
-            success: function (data) {
-                // $('#newsList')
-                console.log(data);
+            crossDomain: true,
+            headers: {
+                'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+            },
+            success: function (newsList) {
+                newsList.forEach(function (news) {
+                    $('#newsList').append(function () {
+                        return `
+                            <div class="card">
+                                <div class="card-body">
+
+                                </div>
+                            </div>
+                        `;
+                    });
+                });
             }
         });
     } else {

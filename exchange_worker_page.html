@@ -35,14 +35,14 @@
                     <a href="exchange_page.html" class="mr-3 nav-link">Биржа</a>
                 </li>
                 <li class="nav-item">
-                    <a href="moderator_page.html" class="mr-3 nav-link">Личное</a>
+                    <a href="account.html" class="mr-3 nav-link">Личное</a>
                 </li>
                 <li class="nav-item">
                     <a href="page_news.html" class="mr-3 nav-link">Новости</a>
                 </li>
             </ul>
 
-            
+
             <button class="mr-5 butn_navmenu" data-toggle="modal" data-target="#exampleModal">
                 Авторизация
             </button>
@@ -53,9 +53,63 @@
     </nav>
 
     <div class="container">
-        <h3 class="moder_h3">Страница Работника биржи</h3>
+        <h3 class="moder_h3">Страница работника биржи</h3>
 
-        <div class="card">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Купить акции</h4>
+                        <form id="buyStockForm">
+                            <div class="form-group">
+                                <label for="number1Input">Введите номер компании: </label>
+                                <input type="tel" class="form-control" required id="number1Input"
+                                    aria-describedby="numberHelp" placeholder="Номер">
+                                <small class="form-text text-muted"></small>
+                            </div>
+                            <div class="number2Input">
+                                <label for="number2Input">Введите кол-во акций</label>
+                                <input type="tel" class="form-control" required id="number2Input"
+                                    aria-describedby="numberHelp" placeholder="Введите кол-во акций">
+                                <small class="form-text text-muted"></small>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-form">
+                                Купить
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Продать акции</h4>
+
+                        <form id="sellStockForm">
+                            <div class="form-group">
+                                <label for="number1Input">Введите номер компании: </label>
+                                <input type="tel" class="form-control" required id="number1Input"
+                                    aria-describedby="numberHelp" placeholder="Номер">
+                                <small class="form-text text-muted"></small>
+                            </div>
+                            <div class="number2Input">
+                                <label for="number2Input">Введите кол-во акций</label>
+                                <input type="tel" class="form-control" required id="number2Input"
+                                    aria-describedby="numberHelp" placeholder="Введите кол-во акций">
+                                <small class="form-text text-muted"></small>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-form">
+                                Продать
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Действия:</h4>
                 <h6 class="moder_h6">Вы можете повлиять на стоимость акций!</h6>
@@ -76,7 +130,7 @@
                     Действие 4
                 </button>
             </div>
-        </div>
+        </div> -->
 
     </div>
 
@@ -225,6 +279,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="scripts/exchangeWorker.js"></script>
 </body>
 
 </html>
