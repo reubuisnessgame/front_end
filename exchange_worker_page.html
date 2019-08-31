@@ -62,9 +62,15 @@
                         <h4 class="card-title">Купить акции</h4>
                         <form id="buyStockForm">
                             <div class="form-group">
-                                <label for="number1Input">Введите номер компании: </label>
-                                <input type="tel" class="form-control" required id="number1Input"
-                                    aria-describedby="numberHelp" placeholder="Номер">
+                                <label for="number1Input">Введите номер команды: </label>
+                                <input type="tel" class="form-control" required id="teamInputBuy"
+                                       aria-describedby="numberHelp" placeholder="Номер">
+                                <small class="form-text text-muted"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="number1Input">Введите название компании: </label>
+                                <input type="text" class="form-control" required id="number1Input"
+                                    aria-describedby="numberHelp" placeholder="Название">
                                 <small class="form-text text-muted"></small>
                             </div>
                             <div class="number2Input">
@@ -87,10 +93,16 @@
                         <h4 class="card-title">Продать акции</h4>
 
                         <form id="sellStockForm">
+                            <div class="form-group-team">
+                                <label for="number0Input">Введите номер команды: </label>
+                                <input type="tel" class="form-control" required id="teamInputSell"
+                                       aria-describedby="numberHelp" placeholder="Номер">
+                                <small class="form-text text-muted"></small>
+                            </div>
                             <div class="form-group">
-                                <label for="number1Input">Введите номер компании: </label>
-                                <input type="tel" class="form-control" required id="number1Input"
-                                    aria-describedby="numberHelp" placeholder="Номер">
+                                <label for="number1Input">Введите название компании: </label>
+                                <input type="text" class="form-control" required id="number1Input"
+                                       aria-describedby="numberHelp" placeholder="Название">
                                 <small class="form-text text-muted"></small>
                             </div>
                             <div class="number2Input">
@@ -150,9 +162,9 @@
                 <div class="modal-body">
                     <div class="container-fluid">
                         <form>
-                            <div class="form-froup">
+                            <div class="form-froup-team">
                                 <label for="exampleInputEmail">Введите номер компании: </label>
-                                <input type="tel" class="form-control" required id="numberInput"
+                                <input type="tel" class="form-control" required id="number0Input"
                                     aria-describedby="numberHelp" placeholder="Номер">
                                 <small class="form-text text-muted"></small>
                             </div>

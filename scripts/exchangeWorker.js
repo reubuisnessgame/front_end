@@ -17,12 +17,10 @@ $(document).ready(function () {
 $('#buyStockForm').submit(function (event) {
     event.preventDefault();
 
-    const companyIndex = $('#buyStockForm #number1Input').val();
+    const companyName = $('#buyStockForm #number1Input').val();
     const amount = $('#buyStockForm #number2Input').val();
-    var companyName = companies.find(function (company) {
-        return company.id == companyIndex;
-    }).companyName;
-    var url = companyIndex +
+    const team = $('#buyStockForm #teamInputBuy').val();
+    var url = team +
         '?count=' + amount +
         '&companyName=' + companyName;
     $.ajax({
@@ -42,12 +40,10 @@ $('#buyStockForm').submit(function (event) {
 $('#sellStockForm').submit(function (event) {
     event.preventDefault();
 
-    const companyIndex = $('#sellStockForm #number1Input').val();
+    const companyName = $('#sellStockForm #number1Input').val();
     const amount = $('#sellStockForm #number2Input').val();
-    var companyName = companies.find(function (company) {
-        return company.id == companyIndex;
-    }).companyName;
-    var url = companyIndex +
+    const team = $('#sellStockForm #teamInputSell').val();
+    var url = team +
         '?count=' + amount +
         '&companyName=' + companyName;
     $.ajax({
