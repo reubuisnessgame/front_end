@@ -173,7 +173,7 @@ $(document).ready(function () {
                     return `
                         <div class="card col-12">
                             <div class="card-body row">
-                                <div class="col-12">
+                                <div class="col-12 font-weight-bold">
                                     Номер команды: ${teamInfo.teamNumber}
                                 </div>
                                 <div class="col-12">

@@ -14,7 +14,7 @@ $('#authForm').submit(function (event) {
             sessionStorage.setItem('role', response.role);
             sessionStorage.setItem('username', response.username);
             sessionStorage.setItem('token', response.token);
-            location.replace('index.html');
+            location.replace('account.html');
         }
     });
 });
