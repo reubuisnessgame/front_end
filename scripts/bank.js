@@ -15,7 +15,8 @@ $(document).ready(() => {
         event.preventDefault();
 
         var creditAmount = $('#takeCreditForm .amount-input').val();
-        var url = '/team/take/credit?sum=' + creditAmount;
+        var teamNumber = $('#takeCreditForm .team-number').val();
+        var url = '/team/take/credit?sum=' + creditAmount + '&team=' + teamNumber;
         $.ajax({
             url: config.teamService + url,
             type: 'POST',
@@ -35,7 +36,8 @@ $(document).ready(() => {
         event.preventDefault();
 
         var depositAmount = $('#makeDepositForm .amount-input').val();
-        var url = '/team/take/deposit?sum=' + depositAmount;
+        var teamNumber = $('#takeCreditForm .team-number').val();
+        var url = '/team/take/deposit?sum=' + depositAmount + '&team=' + teamNumber ;
         $.ajax({
             url: config.teamService + url,
             type: 'POST',
@@ -55,7 +57,8 @@ $(document).ready(() => {
         event.preventDefault();
 
         var creditAmount = $('#repayLoanForm .amount-input').val();
-        var url = '/team/rtn/credit?sum=' + creditAmount;
+        var teamNumber = $('#takeCreditForm .team-number').val();
+        var url = '/team/rtn/credit?sum=' + creditAmount + '&team=' + teamNumber;
         $.ajax({
             url: config.teamService + url,
             type: 'POST',
@@ -75,7 +78,8 @@ $(document).ready(() => {
         event.preventDefault();
 
         var creditAmount = $('#withdrawalForm .amount-input').val();
-        var url = '/team/rtn/deposit?sum={sum}' + creditAmount;
+        var teamNumber = $('#takeCreditForm .team-number').val();
+        var url = '/team/rtn/deposit?sum={sum}' + creditAmount + '&team=' + teamNumber;
         $.ajax({
             url: config.teamService + url,
             type: 'POST',
