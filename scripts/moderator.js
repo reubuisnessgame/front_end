@@ -165,16 +165,16 @@ $(document).ready(function () {
                     return `
                         <div class="card col-12">
                             <div class="card-body">
-                                <span>
+                                <span class="col-12">
                                     Номер команды: ${teamInfo.teamNumber}
                                 </span>
-                                <span>
+                                <span class="col-12">
                                     Количество очков: ${teamInfo.score}
                                 </span>
-                                <span>
+                                <span class="col-12">
                                     Общее количество очков: ${teamInfo.fullScore}
                                 </span>
-                                <span>
+                                <span class="col-12">
                                     Кредит: ${teamInfo.credit}
                                 </span>
                                 <span>
