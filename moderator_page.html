@@ -209,11 +209,11 @@
     <!-- Форма создание задачи -->
 
     <div class="modal fade" id="create-task" tabindex="-1" role="dialog" aria-labelledby="exampleModal"
-        aria-hidden="true">
+         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Создание задачи</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Создание новости</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -221,20 +221,20 @@
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <form id="createTaskForTeam">
-                            <label for="exampleInputEmail">Название задачи</label>
-                            <input type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"
-                                required placeholder="Название">
-                            <label for="exampleInputPass">Текст задачи</label>
-                            <input type="text" class="form-control" id="exampleInputPass" aria-describedby="passHelp"
-                                required placeholder="Текст задачи">
-                            <label for="exampleInputPass">Ответ на задачу</label>
-                            <input type="text" class="form-control" id="exampleInputPass" aria-describedby="passHelp"
-                                required placeholder="Ответ">
-                            <label for="exampleInputPass">Кол-во баллов</label>
-                            <input type="text" class="form-control" id="exampleInputPass" aria-describedby="passHelp"
-                                required placeholder="Баллы">
-                            <button type="submit" class="btn btn-primary btn-form">
+                        <form>
+                            <label for="exampleInputEmail">Заголовок новости</label>
+                            <input type="text" class="form-control" id="NewsHeader" aria-describedby="emailHelp"
+                                   required placeholder="Название">
+                            <label for="exampleInputPass">Текст новости</label>
+                            <input type="text" class="form-control" id="NewsText" aria-describedby="passHelp"
+                                   required placeholder="Текст новости">
+                            <label for="exampleInputPass">Изменение курса</label>
+                            <input type="number" class="form-control" id="NewsChangingCourse" aria-describedby="passHelp"
+                                   required placeholder="0">
+                            <label for="exampleInputPass">Название компании</label>
+                            <input type="text" class="form-control" id="CompanyName" aria-describedby="passHelp"
+                                   required placeholder="Название">
+                            <button type="submit" id = "sendNewsButton" data-target="sendNewsButton" class="btn btn-primary btn-form">
                                 Отправить
                             </button>
                         </form>
