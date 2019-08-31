@@ -60,11 +60,25 @@
                 <h4 class="card-title">Действия ведущего</h4>
                 <h6 class="moder_h6">Введите реквизиты команды!</h6>
                 <hr>
-                <button class="butn_moder" data-toggle="modal" data-target="#takeModal">
+               <!-- <button class="butn_moder" data-toggle="modal" data-target="#takeModal">
                     Прохождение станции
-                </button>
-                <hr>
-                <hr>
+                </button>-->
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <label for="exampleInputEmail">Номер команды</label>
+                            <input type="text" class="form-control" id="NewsHeader" aria-describedby="emailHelp"
+                                   required placeholder="Название">
+                            <label for="exampleInputPass">Ставка</label>
+                            <input type="text" class="form-control" id="NewsText" aria-describedby="passHelp"
+                                   required placeholder="Текст новости">
+                            <button type="submit" id = "sendNewsButton" data-target="sendNewsButton" class="btn btn-primary btn-form">
+                                Отправить
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
                 <h6 class="moder_h6">Команда:</h6>
                 <div class="row">
                     <div class="col-md-6">
@@ -215,6 +229,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="scripts/lead.js"></script>
 </body>
 
 </html>
