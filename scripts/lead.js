@@ -10,6 +10,8 @@ $(document).ready(function () {
         return;
     }
 
+    $('#blockTeamForm .text-success').hide();
+    $('#blockTeamForm .text-warning').hide();
     $('#blockTeamForm').submit(function (event) {
         event.preventDefault();
 
@@ -31,8 +33,15 @@ $(document).ready(function () {
                 'Authorization': 'Bearer ' + sessionStorage.getItem('token')
             },
             success: function () {
+                $('#blockTeamForm .text-success').show();
+                $('#blockTeamForm .text-warning').hide();
+
                 sessionStorage.setItem('teamNumber', teamNumber);
                 sessionStorage.setItem('rate', rate);
+            },
+            error: function () {
+                $('#blockTeamForm .text-success').hide();
+                $('#blockTeamForm .text-warning').show();
             }
         });
     });

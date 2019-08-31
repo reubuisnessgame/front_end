@@ -43,6 +43,7 @@ $(document).ready(function () {
         });
     });
 
+    // $('#createTaskForTeam .text-success').hide();
     $('#createTaskForTeam').submit(function (event) {
         event.preventDefault();
 
@@ -55,7 +56,7 @@ $(document).ready(function () {
                 'Authorization': 'Bearer ' + sessionStorage.getItem('token')
             },
             success: function () {
-
+                // $('#createTaskForTeam .text-success').show();
             }
         });
     });
@@ -68,6 +69,7 @@ $(document).ready(function () {
         location.replace('exchange_worker_page.html');
     });
 
+    $('#teamRegistrationForm .text-success').hide();
     $('#teamRegistrationForm').submit(function (event) {
         event.preventDefault();
 
@@ -80,7 +82,7 @@ $(document).ready(function () {
                 'Authorization': 'Bearer ' + sessionStorage.getItem('token')
             },
             success: function (teamInfo) {
-
+                $('#teamRegistrationForm .text-success').show();
             }
         });
     });
@@ -97,7 +99,8 @@ $(document).ready(function () {
             },
             success: function (teamsInfo) {
                 var teams = teamsInfo.teams;
-                
+
+                $('#teamList').empty();
                 teams.forEach(function (team) {
                     $('#teamList').append(function () {
                         return `
@@ -124,6 +127,7 @@ $(document).ready(function () {
         });
     });
     
+    $('#newsCreationForm .text-success').hide();
     $('#newsCreationForm').submit(function (event) {
         event.preventDefault();
 
@@ -143,7 +147,7 @@ $(document).ready(function () {
                 'Authorization': 'Bearer ' + sessionStorage.getItem('token')
             },
             success: function (response) {
-                console.log("Success" + response.data);
+                $('#newsCreationForm .text-success').show();
             }
         });
     });
@@ -161,6 +165,7 @@ $(document).ready(function () {
                 'Authorization': 'Bearer ' + sessionStorage.getItem('token')
             },
             success: function (teamInfo) {
+                $('#teamInfoContainer').empty();
                 $('#teamInfoContainer').append(function () {
                     return `
                         <div class="card col-12">

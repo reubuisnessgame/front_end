@@ -222,18 +222,25 @@
                 <div class="modal-body">
                     <div class="container-fluid">
                         <form id="newsCreationForm">
-                            <label for="exampleInputEmail">Заголовок новости</label>
-                            <input type="text" class="form-control" id="NewsHeader" aria-describedby="emailHelp"
-                                required placeholder="Название">
-                            <label for="exampleInputPass">Текст новости</label>
-                            <input type="text" class="form-control" id="NewsText" aria-describedby="passHelp" required
-                                placeholder="Текст новости">
-                            <label for="exampleInputPass">Изменение курса</label>
-                            <input type="number" class="form-control" id="NewsChangingCourse"
-                                aria-describedby="passHelp" required placeholder="0">
-                            <label for="exampleInputPass">Название компании</label>
-                            <input type="text" class="form-control" id="CompanyName" aria-describedby="passHelp"
-                                required placeholder="Название">
+                            <div class="form-froup">
+                                <label for="exampleInputEmail">Заголовок новости</label>
+                                <input type="text" class="form-control" id="NewsHeader" aria-describedby="emailHelp"
+                                    required placeholder="Название">
+                                <label for="exampleInputPass">Текст новости</label>
+                                <input type="text" class="form-control" id="NewsText" aria-describedby="passHelp"
+                                    required placeholder="Текст новости">
+                                <label for="exampleInputPass">Изменение курса</label>
+                                <input type="number" class="form-control" id="NewsChangingCourse"
+                                    aria-describedby="passHelp" required placeholder="0">
+                                <label for="exampleInputPass">Название компании</label>
+                                <input type="text" class="form-control" id="CompanyName" aria-describedby="passHelp"
+                                    required placeholder="Название">
+
+                                <span class="text-success">
+                                    Новость успешно создана
+                                </span>
+                            </div>
+
                             <button type="submit" id="sendNewsButton" data-target="sendNewsButton"
                                 class="btn btn-primary btn-form">
                                 Отправить
@@ -268,7 +275,11 @@
                                     pattern="[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}">
                                 <small class="form-text text-muted">Введите номер без знака "-", то есть "1234 1234 1234
                                     1234"</small>
+                                <span class="text-success">
+                                    Команда успешно создана
+                                </span>
                             </div>
+
                             <button type="submit" class="btn btn-primary btn-form">
                                 Создать
                             </button>
