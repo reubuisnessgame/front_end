@@ -60,18 +60,25 @@
                 <h4 class="card-title">Действия ведущего</h4>
                 <h6 class="moder_h6">Введите реквизиты команды!</h6>
                 <hr>
-                <button class="butn_moder" data-toggle="modal" data-target="#takeModal">
-                    Ввести номер команды
-                </button>
-                <hr>
-                <button class="butn_moder" data-toggle="modal" data-target="#betModal">
-                    Ввести ставку
-                </button>
-                <hr>
-                <button class="butn_moder" data-toggle="modal" data-target="#start-game">
-                    Начать прохождение станции
-                </button>
-                <hr>
+               <!-- <button class="butn_moder" data-toggle="modal" data-target="#takeModal">
+                    Прохождение станции
+                </button>-->
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <label for="exampleInputEmail">Номер команды</label>
+                            <input type="text" class="form-control" id="NewsHeader" aria-describedby="emailHelp"
+                                   required placeholder="Название">
+                            <label for="exampleInputPass">Ставка</label>
+                            <input type="text" class="form-control" id="NewsText" aria-describedby="passHelp"
+                                   required placeholder="Текст новости">
+                            <button type="submit" id = "sendNewsButton" data-target="sendNewsButton" class="btn btn-primary btn-form">
+                                Отправить
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
                 <h6 class="moder_h6">Команда:</h6>
                 <div class="row">
                     <div class="col-md-6">
@@ -96,7 +103,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="takelLabel">Номер команды</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Прохождение станции</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -105,16 +112,14 @@
                 <div class="modal-body">
                     <div class="container-fluid">
                         <form>
-                            <div class="form-froup">
-                                <label for="exampleInputEmail">Введите номер команды</label>
-                                <input type="tel" class="form-control" required id="numberInput"
-                                    aria-describedby="numberHelp" placeholder="xxxx-xxxx-xxxx-xxxx"
-                                    pattern="[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}">
-                                <small class="form-text text-muted">Введите номер без знака "-", то есть "1234 1234 1234
-                                    1234"</small>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-form">
-                                Создать
+                            <label for="exampleInputEmail">Номер команды</label>
+                            <input type="text" class="form-control" id="NewsHeader" aria-describedby="emailHelp"
+                                   required placeholder="Название">
+                            <label for="exampleInputPass">Ставка</label>
+                            <input type="text" class="form-control" id="NewsText" aria-describedby="passHelp"
+                                   required placeholder="Текст новости">
+                            <button type="submit" id = "sendNewsButton" data-target="sendNewsButton" class="btn btn-primary btn-form">
+                                Отправить
                             </button>
                         </form>
                     </div>
@@ -123,36 +128,7 @@
         </div>
     </div>
 
-    <!-- Ставка -->
 
-    <div class="modal fade" id="betModal" tabindex="-1" role="dialog" aria-labelledby="betModal" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="betLabel">Ставка</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times</span>
-                    </button>
-
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <form>
-                            <div class="form-froup">
-                                <label for="exampleInputEmail">Введите ставку</label>
-                                <input type="tel" class="form-control" required id="numberInput"
-                                    aria-describedby="numberHelp" placeholder="Введите ставку">
-                                <small class="form-text text-muted"></small>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-form">
-                                Готово
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Форма Авторизации -->
 
@@ -185,6 +161,8 @@
             </div>
         </div>
     </div>
+
+
     <!-- Форма Регистрации -->
 
     <div class="modal fade" id="regModal" tabindex="-1" role="dialog" aria-labelledby="regModal" aria-hidden="true">
@@ -251,6 +229,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="scripts/lead.js"></script>
 </body>
 
 </html>
