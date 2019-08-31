@@ -46,6 +46,8 @@ $(document).ready(function () {
         });
     });
 
+    $('#gameResultHint .text-success').hide();
+
     $('#win').click(function () {
         var scoreData = JSON.stringify({
             rate: sessionStorage.getItem('rate'),
@@ -63,7 +65,7 @@ $(document).ready(function () {
                 'Authorization': 'Bearer ' + sessionStorage.getItem('token')
             },
             success: function () {
-
+                $('#gameResultHint .text-success').show();
             }
         });
     });
@@ -85,7 +87,7 @@ $(document).ready(function () {
                 'Authorization': 'Bearer ' + sessionStorage.getItem('token')
             },
             success: function () {
-
+                $('#gameResultHint .text-success').show();
             }
         });
     });

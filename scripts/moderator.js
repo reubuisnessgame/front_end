@@ -105,19 +105,22 @@ $(document).ready(function () {
                     $('#teamList').append(function () {
                         return `
                         <div class="card col-12">
-                            <div class="card-body">
+                            <div class="card-body row">
                                 <p class="col-12 font-weight-bold">
                                     ${team.username}
                                 </p>
-                                <span class="col-12">
-                                    Общее кол-во очков: ${team.fullScore}
-                                </span>
-                                <span class="col-12">
+                                <div class="col-12">
+                                    Текущее количество очков: ${team.score}
+                                </div>
+                                <div class="col-12">
+                                    Общее количество очков: ${team.fullScore}
+                                </div>
+                                <div class="col-12">
                                     Кредит: ${team.credit}
-                                </span>
-                                <span class="col-12">
+                                </div>
+                                <div class="col-12">
                                     Депозит: ${team.deposit}
-                                </span>
+                                </div>
                             </div>
                         </div>
                         `;
@@ -170,21 +173,21 @@ $(document).ready(function () {
                     return `
                         <div class="card col-12">
                             <div class="card-body row">
-                                <span class="col-12">
+                                <div class="col-12">
                                     Номер команды: ${teamInfo.teamNumber}
-                                </span>
-                                <span class="col-12">
+                                </div>
+                                <div class="col-12">
                                     Количество очков: ${teamInfo.score}
-                                </span>
-                                <span class="col-12">
+                                </div>
+                                <div class="col-12">
                                     Общее количество очков: ${teamInfo.fullScore}
-                                </span>
-                                <span class="col-12">
+                                </div>
+                                <div class="col-12">
                                     Кредит: ${teamInfo.credit}
-                                </span>
-                                <span class="col-12">
+                                </div>
+                                <div class="col-12">
                                     Депозит: ${teamInfo.deposit}
-                                </span>
+                                </div>
                             </div>
                         </div>
                     `;
