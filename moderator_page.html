@@ -259,7 +259,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <form>
+                        <form id="teamRegistrationForm">
                             <div class="form-froup">
                                 <label for="exampleInputEmail">Номер новой команды</label>
                                 <input type="tel" class="form-control" required id="numberInput"
@@ -293,7 +293,9 @@
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <form style="text-align: center">
+                        <div class="row" id="teamList"></div>
+                        
+                        <form class="text-center" id="teamListForm">
                             <button style=" padding: 10px" type="submit" class="btn btn-primary btn-form">
                                 Запросить список всех команд
                             </button>
