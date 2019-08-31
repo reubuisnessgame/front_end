@@ -37,7 +37,7 @@ $(document).ready(() => {
 
         var depositAmount = $('#makeDepositForm .amount-input').val();
         var teamNumber = $('#makeDepositForm .team-number').val();
-        var url = '/team/take/deposit?sum=' + depositAmount + '&team=' + teamNumber ;
+        var url = '/team/take/deposit?sum=' + depositAmount + '&team=' + teamNumber;
         $.ajax({
             url: config.teamService + url,
             type: 'POST',
@@ -79,7 +79,7 @@ $(document).ready(() => {
 
         var creditAmount = $('#withdrawalForm .amount-input').val();
         var teamNumber = $('#withdrawalForm .team-number').val();
-        var url = '/team/rtn/deposit?sum={sum}' + creditAmount + '&team=' + teamNumber;
+        var url = '/team/rtn/deposit?sum=' + creditAmount + '&team=' + teamNumber;
         $.ajax({
             url: config.teamService + url,
             type: 'POST',
