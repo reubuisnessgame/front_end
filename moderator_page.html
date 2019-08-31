@@ -52,7 +52,7 @@
 
 
     <div class="container">
-        <h3 class="moder_h3">Страница Модератора</h3>
+        <h3 class="moder_h3">Страница модератора</h3>
         <div class="row">
             <div class="col-md-8">
                 <div class="card">
@@ -82,7 +82,7 @@
                             Личная страница ведущего станции
                         </button>
                         <button class="butn_moder" id="exchangeWorkerPage">
-                            Личная страница работника биржи
+                            Личная Страница работника биржи
                         </button>
                     </div>
                 </div>
@@ -321,7 +321,9 @@
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <form>
+                        <div class="row" id="teamInfoContainer"></div>
+
+                        <form id="teamInfoForm">
                             <div class="form-froup">
                                 <label for="exampleInputEmail">Номер новой команды</label>
                                 <input type="tel" class="form-control" required id="numberInput"
@@ -331,7 +333,7 @@
                                     1234"</small>
                             </div>
                             <button type="submit" class="btn btn-primary btn-form">
-                                Создать
+                                Получить информацию
                             </button>
                         </form>
                     </div>
