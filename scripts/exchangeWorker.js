@@ -13,50 +13,66 @@ $(document).ready(function () {
         return;
     }
 
-    
-$('#buyStockForm').submit(function (event) {
-    event.preventDefault();
-
-    const companyName = $('#buyStockForm #number1Input').val();
-    const amount = $('#buyStockForm #number2Input').val();
-    const team = $('#buyStockForm #teamInputBuy').val();
-    var url = team +
-        '?count=' + amount +
-        '&companyName=' + companyName;
     $.ajax({
-        url: config.stockExchangeService + '/stock/buy/' + url,
-        type: 'POST',
-        contentType: "application/json",
+        url: config.adminService + '/admin/me',
+        type: 'GET',
         crossDomain: true,
         headers: {
             'Authorization': 'Bearer ' + sessionStorage.getItem('token')
         },
-        success: function (data) {
-            console.log(data);
+        success: function (accountInfo) {
+            $('.sp_admin_info').append(accountInfo.username);
+            $('.sp_admin_role').append(accountInfo.role);
+            $('.sp_admin_max_score').append(accountInfo.maxScore);
+            $('.sp_admin_coefficient').append(accountInfo.coefficient);
         }
     });
-});
 
-$('#sellStockForm').submit(function (event) {
-    event.preventDefault();
 
-    const companyName = $('#sellStockForm #number1Input').val();
-    const amount = $('#sellStockForm #number2Input').val();
-    const team = $('#sellStockForm #teamInputSell').val();
-    var url = team +
-        '?count=' + amount +
-        '&companyName=' + companyName;
-    $.ajax({
-        url: config.stockExchangeService + '/stock/sell/' + url,
-        type: 'POST',
-        contentType: "application/json",
-        crossDomain: true,
-        headers: {
-            'Authorization': 'Bearer ' + sessionStorage.getItem('token')
-        },
-        success: function (data) {
-            console.log(data);
-        }
+    $('#buyStockForm').submit(function (event) {
+        event.preventDefault();
+
+        const companyName = $('#buyStockForm #number1Input').val();
+        const amount = $('#buyStockForm #number2Input').val();
+        const team = $('#buyStockForm #teamInputBuy').val();
+        var url = team +
+            '?count=' + amount +
+            '&companyName=' + companyName;
+        $.ajax({
+            url: config.stockExchangeService + '/stock/buy/' + url,
+            type: 'POST',
+            contentType: "application/json",
+            crossDomain: true,
+            headers: {
+                'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+            },
+            success: function (data) {
+                console.log(data);
+            }
+        });
     });
-});
+
+    $('#sellStockForm').submit(function (event) {
+        event.preventDefault();
+
+        const companyName = $('#sellStockForm #number1Input').val();
+        const amount = $('#sellStockForm #number2Input').val();
+        const team = $('#sellStockForm #teamInputSell').val();
+        var url = team +
+            '?count=' + amount +
+            '&companyName=' + companyName;
+        $.ajax({
+            url: config.stockExchangeService + '/stock/sell/' + url,
+            type: 'POST',
+            contentType: "application/json",
+            crossDomain: true,
+            headers: {
+                'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+            },
+            success: function (data) {
+                console.log(data);
+            }
+        });
+    });
+
 });
