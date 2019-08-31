@@ -65,7 +65,7 @@
                 </button>-->
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <form>
+                        <form id="blockTeamForm">
                             <label for="exampleInputEmail">Номер команды</label>
                             <input type="text" class="form-control" id="NewsHeader" aria-describedby="emailHelp"
                                    required placeholder="Название">
@@ -82,12 +82,12 @@
                 <h6 class="moder_h6">Команда:</h6>
                 <div class="row">
                     <div class="col-md-6">
-                        <button class="butn_moder-win" data-toggle="modal" data-target="#out-money-Modal">
-                            Выйграла
+                        <button class="butn_moder-win" data-toggle="modal" id="win">
+                            Выиграла
                         </button>
                     </div>
                     <div class="col-md-6">
-                        <button class="butn_moder-lose" data-toggle="modal" data-target="#out-money-Modal">
+                        <button class="butn_moder-lose" data-toggle="modal" id="lose">
                             Проиграла
                         </button>
                     </div>
