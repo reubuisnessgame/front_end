@@ -28,20 +28,16 @@ $(document).ready(function () {
         }
     });
 
-    var isGameStarted = localStorage.getItem('isGameStarted');
-    if(isGameStarted){
+    var isGameStarted = Boolean(localStorage.getItem('isGameStarted'));
+    if (isGameStarted) {
         $('[data-target="#start-game-btn"]').text('Остановить игру');
     } else {
+        localStorage.setItem('isGameStarted', true);
         $('[data-target="#start-game-btn"]').text('Начать игру');
     }
 
     $('[data-target="#start-game-btn"]').click(function () {
-        var gameStartOrStopUrl = '/admin/game?start=true';
-        var gameStatus = true;
-        if(isGameStarted){
-            gameStartOrStopUrl = '/admin/game?start=false';
-            gameStatus = false;
-        }
+        var gameStartOrStopUrl = '/admin/game?start=' + isGameStarted.toString();
 
         $.ajax({
             url: config.adminService + gameStartOrStopUrl,
@@ -58,22 +54,22 @@ $(document).ready(function () {
     });
 
     // $('#createTaskForTeam .text-success').hide();
-    $('#createTaskForTeam').submit(function (event) {
-        event.preventDefault();
+    // $('#createTaskForTeam').submit(function (event) {
+    //     event.preventDefault();
 
-        $.ajax({
-            url: config.adminService + '/admin/game?start=true',
-            type: 'POST',
-            crossDomain: true,
-            contentType: "application/json",
-            headers: {
-                'Authorization': 'Bearer ' + sessionStorage.getItem('token')
-            },
-            success: function () {
-                // $('#createTaskForTeam .text-success').show();
-            }
-        });
-    });
+    //     $.ajax({
+    //         url: config.adminService + '/admin/game?start=true',
+    //         type: 'POST',
+    //         crossDomain: true,
+    //         contentType: "application/json",
+    //         headers: {
+    //             'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+    //         },
+    //         success: function () {
+    //             // $('#createTaskForTeam .text-success').show();
+    //         }
+    //     });
+    // });
 
     $('#leadPageButton').click(function () {
         location.replace('lead_page.html');
@@ -143,7 +139,7 @@ $(document).ready(function () {
             }
         });
     });
-    
+
     $('#newsCreationForm .text-success').hide();
     $('#newsCreationForm').submit(function (event) {
         event.preventDefault();
@@ -209,5 +205,42 @@ $(document).ready(function () {
             }
         });
     });
-});
 
+    $('#userRegistrationForm .text-success').hide();
+    $('#userRegistrationForm .text-danger').hide();
+
+    $('#userRegistrationForm').submit(function (event) {
+        event.preventDefault();
+
+        var newUser = JSON.stringify({
+            username: $('#userRegistrationForm [name="login"]').val(),
+            password: $('#userRegistrationForm [name="password"]').val(),
+            role: $('#userRegistrationForm [name="roleSelect"]').val(),
+            maxScore: parseInt(
+                $('#userRegistrationForm [name="scoreAmount"]').val()
+            ),
+            coefficient: parseInt(
+                $('#userRegistrationForm [name="coefficient"]').val()
+            )
+        });
+
+        $.ajax({
+            url: config.adminService + '/admin/create_adm',
+            type: 'POST',
+            data: newUser,
+            dataType: 'json',
+            contentType: "application/json; charset=utf-8",
+            headers: {
+                'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+            },
+            success: function () {
+                $('#userRegistrationForm .text-success').show();
+                $('#userRegistrationForm .text-danger').hide();
+            },
+            error: function () {
+                $('#userRegistrationForm .text-success').hide();
+                $('#userRegistrationForm .text-danger').show();
+            }
+        });
+    });
+});

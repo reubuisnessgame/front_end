@@ -139,64 +139,8 @@
             </div>
         </div>
     </div>
-    <!-- Форма Регистрации -->
 
-    <div class="modal fade" id="regModal" tabindex="-1" role="dialog" aria-labelledby="regModal" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="regModalLabel">Регистрация</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <form id="formRegistration">
-                            <div class="form-froup">
-                                <label for="exampleInputLogin">Ваш логин</label>
-                                <input name="login" type="text" class="form-control" id="regInputLogin"
-                                    placeholder="Логин" required>
-                            </div>
-                            <div class="form-froup">
-                                <label for="exampleInputPass">Пароль</label>
-                                <input name="pass" type="text" class="form-control" id="exampleInputPass"
-                                    placeholder="Пароль" required>
-                            </div>
-                            <div id="result-block"></div>
-                            <div class="form-froup">
-                                <label for="exampleInputPass">Ваша роль</label>
-                                <p>
-                                    <select id="select-regestr" style="width:100%" size="3" name="game_role">
-                                        <option disabled>Выберите роль</option>
-                                        <option value="Модератор">Модератор</option>
-                                        <option selected value="Ведущий">Ведущий</option>
-                                        <option value="Биржа">Биржа</option>
-                                    </select>
-                                </p>
-
-                                <!--<input type="email" class="form-control" id="exampleInputPass" aria-describedby="passHelp" placeholder="Пароль"> -->
-                            </div>
-                            <div class="form-froup">
-                                <label for="exampleInputPass">Кол-во очков</label>
-                                <input type="number" class="form-control" id="exampleInputPass"
-                                    aria-describedby="passHelp" placeholder="Кол-во очков" required>
-                            </div>
-                            <div class="form-froup">
-                                <label for="exampleInputPass">Коэффициент</label>
-                                <input type="number" class="form-control" id="exampleInputPass"
-                                    aria-describedby="passHelp" placeholder="Коэффициент" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-form">
-                                Отправить
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <!-- подключаем JavaScript -->
     <!-- подключаем jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
