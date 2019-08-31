@@ -124,19 +124,20 @@ $(document).ready(function () {
         });
     });
     
-    $('#sendNewsButton1').click(function (event) {
+    $('#newsCreationForm').submit(function (event) {
         event.preventDefault();
+
         var requestData = JSON.stringify({
             companyName: $('#CompanyName').val(),
-            changingPrice: $('#NewsChangingCourse').val(),
+            changingPrice: parseInt($('#NewsChangingCourse').val()),
             heading: $('#NewsHeader').val(),
             article: $('#NewsText').val()
-
         });
         $.ajax({
             url: config.stockExchangeService + '/stock/change',
             type: 'POST',
             data: requestData,
+            dataType: 'json',
             contentType: "application/json; charset=utf-8",
             headers: {
                 'Authorization': 'Bearer ' + sessionStorage.getItem('token')
