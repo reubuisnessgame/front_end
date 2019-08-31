@@ -131,7 +131,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <form>
+                        <form id="authForm">
                             <label for="exampleInputEmail">Ваш логин</label>
                             <input type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"
                                 required placeholder="Логин">
@@ -209,7 +209,7 @@
     <!-- Форма создание задачи -->
 
     <div class="modal fade" id="create-task" tabindex="-1" role="dialog" aria-labelledby="exampleModal"
-         aria-hidden="true">
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -224,17 +224,18 @@
                         <form id="newsCreationForm">
                             <label for="exampleInputEmail">Заголовок новости</label>
                             <input type="text" class="form-control" id="NewsHeader" aria-describedby="emailHelp"
-                                   required placeholder="Название">
+                                required placeholder="Название">
                             <label for="exampleInputPass">Текст новости</label>
-                            <input type="text" class="form-control" id="NewsText" aria-describedby="passHelp"
-                                   required placeholder="Текст новости">
+                            <input type="text" class="form-control" id="NewsText" aria-describedby="passHelp" required
+                                placeholder="Текст новости">
                             <label for="exampleInputPass">Изменение курса</label>
-                            <input type="number" class="form-control" id="NewsChangingCourse" aria-describedby="passHelp"
-                                   required placeholder="0">
+                            <input type="number" class="form-control" id="NewsChangingCourse"
+                                aria-describedby="passHelp" required placeholder="0">
                             <label for="exampleInputPass">Название компании</label>
                             <input type="text" class="form-control" id="CompanyName" aria-describedby="passHelp"
-                                   required placeholder="Название">
-                            <button type="submit" id = "sendNewsButton" data-target="sendNewsButton" class="btn btn-primary btn-form">
+                                required placeholder="Название">
+                            <button type="submit" id="sendNewsButton" data-target="sendNewsButton"
+                                class="btn btn-primary btn-form">
                                 Отправить
                             </button>
                         </form>
@@ -294,7 +295,7 @@
                 <div class="modal-body">
                     <div class="container-fluid">
                         <div class="row" id="teamList"></div>
-                        
+
                         <form class="text-center" id="teamListForm">
                             <button style=" padding: 10px" type="submit" class="btn btn-primary btn-form">
                                 Запросить список всех команд
@@ -431,6 +432,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="scripts/login.js"></script>
     <script src="scripts/moderator.js"></script>
 </body>
 

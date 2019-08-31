@@ -42,7 +42,7 @@
                 </li>
             </ul>
 
-            
+
             <button class="mr-5 butn_navmenu" data-toggle="modal" data-target="#exampleModal">
                 Авторизация
             </button>
@@ -60,19 +60,20 @@
                 <h4 class="card-title">Действия ведущего</h4>
                 <h6 class="moder_h6">Введите реквизиты команды!</h6>
                 <hr>
-               <!-- <button class="butn_moder" data-toggle="modal" data-target="#takeModal">
+                <!-- <button class="butn_moder" data-toggle="modal" data-target="#takeModal">
                     Прохождение станции
                 </button>-->
                 <div class="modal-body">
                     <div class="container-fluid">
                         <form id="blockTeamForm">
                             <label for="exampleInputEmail">Номер команды</label>
-                            <input type="tel" class="form-control" id="NewsHeader" aria-describedby="emailHelp"
-                                   required placeholder="1234567812345678">
+                            <input type="tel" class="form-control" id="NewsHeader" aria-describedby="emailHelp" required
+                                placeholder="1234567812345678">
                             <label for="exampleInputPass">Ставка</label>
-                            <input type="number" class="form-control" id="NewsText" aria-describedby="passHelp"
-                                   required placeholder="0">
-                            <button type="submit" id = "sendNewsButton" data-target="sendNewsButton" class="btn btn-primary btn-form">
+                            <input type="number" class="form-control" id="NewsText" aria-describedby="passHelp" required
+                                placeholder="0">
+                            <button type="submit" id="sendNewsButton" data-target="sendNewsButton"
+                                class="btn btn-primary btn-form">
                                 Отправить
                             </button>
                         </form>
@@ -114,11 +115,12 @@
                         <form>
                             <label for="exampleInputEmail">Номер команды</label>
                             <input type="text" class="form-control" id="NewsHeader" aria-describedby="emailHelp"
-                                   required placeholder="Название">
+                                required placeholder="Название">
                             <label for="exampleInputPass">Ставка</label>
-                            <input type="text" class="form-control" id="NewsText" aria-describedby="passHelp"
-                                   required placeholder="Текст новости">
-                            <button type="submit" id = "sendNewsButton1" data-target="sendNewsButton" class="btn btn-primary btn-form">
+                            <input type="text" class="form-control" id="NewsText" aria-describedby="passHelp" required
+                                placeholder="Текст новости">
+                            <button type="submit" id="sendNewsButton1" data-target="sendNewsButton"
+                                class="btn btn-primary btn-form">
                                 Отправить
                             </button>
                         </form>
@@ -145,7 +147,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <form>
+                        <form id="authForm">
                             <label for="exampleInputEmail">Ваш логин</label>
                             <input type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"
                                 required placeholder="Логин">
@@ -229,6 +231,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="scripts/login.js"></script>
     <script src="scripts/lead.js"></script>
 </body>
 
