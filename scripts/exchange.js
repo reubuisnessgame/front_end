@@ -40,13 +40,13 @@ $(document).ready(function () {
             }
         });
     } else {
-        // location.replace('auth_required.html');
+        location.replace('auth_required.html');
         return;
     }
 
     var role = sessionStorage.getItem('role');
     if (role !== 'MODERATOR' && role !== 'EXCHANGE_WORKER') {
-        //location.replace('permission_required.html');
+        location.replace('permission_required.html');
         return;
     }
 });
