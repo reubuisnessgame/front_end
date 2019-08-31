@@ -43,7 +43,9 @@ $(document).ready(function () {
         });
     });
 
-    $('#createTaskForTeam').submit(function () {
+    $('#createTaskForTeam').submit(function (event) {
+        event.preventDefault();
+
         $.ajax({
             url: config.adminService + '/admin/game?start=true',
             type: 'POST',
@@ -142,6 +144,46 @@ $(document).ready(function () {
             success: function (response) {
                 console.log("Success");
                 location.replace('index.html');
+            }
+        });
+    });
+
+    $('#teamInfoForm').submit(function (event) {
+        event.preventDefault();
+
+        var teamNumber = $('#teamInfoForm input:first').val();
+        var teamInfoEndpoint = '/admin/team/' + teamNumber;
+        $.ajax({
+            url: config.adminService + teamInfoEndpoint,
+            type: 'GET',
+            contentType: "application/json; charset=utf-8",
+            headers: {
+                'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+            },
+            success: function (teamInfo) {
+                $('#teamInfoContainer').append(function () {
+                    return `
+                        <div class="card col-12">
+                            <div class="card-body">
+                                <span>
+                                    Номер команды: ${teamInfo.teamNumber}
+                                </span>
+                                <span>
+                                    Количество очков: ${teamInfo.score}
+                                </span>
+                                <span>
+                                    Общее количество очков: ${teamInfo.fullScore}
+                                </span>
+                                <span>
+                                    Кредит: ${teamInfo.credit}
+                                </span>
+                                <span>
+                                    Депозит: ${teamInfo.deposit}
+                                </span>
+                            </div>
+                        </div>
+                    `;
+                });
             }
         });
     });
