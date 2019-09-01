@@ -1,9 +1,4 @@
 $(document).ready(() => {
-    if (sessionStorage.getItem('loggedTeam')) {
-        location.replace('page_team.html');
-        return;
-    }
-
     if (!sessionStorage.getItem('token')) {
         location.replace('auth_required.html');
         return;
@@ -31,9 +26,8 @@ $(document).ready(() => {
             location.replace('exchange_worker_page.html');
             return;
 
-        case 'MODERATOR':
+        case 'TEAM':
             location.replace('page_team.html');
             return;
-
     }
 });

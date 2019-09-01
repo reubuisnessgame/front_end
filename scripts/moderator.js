@@ -216,10 +216,10 @@ $(document).ready(function () {
             username: $('#userRegistrationForm [name="login"]').val(),
             password: $('#userRegistrationForm [name="password"]').val(),
             role: $('#userRegistrationForm [name="roleSelect"]').val(),
-            maxScore: parseInt(
+            maxScore: parseFloat(
                 $('#userRegistrationForm [name="scoreAmount"]').val()
             ),
-            coefficient: parseInt(
+            coefficient: parseFloat(
                 $('#userRegistrationForm [name="coefficient"]').val()
             )
         });

@@ -6,7 +6,9 @@ $(document).ready(function () {
 
     let role = sessionStorage.getItem('role');
     if (role !== 'MODERATOR' &&
-        role !== 'EXCHANGE_WORKER'
+        role !== 'EXCHANGE_WORKER' &&
+        role !== 'LEADING' &&
+        role !== 'TEAM'
     ) {
         location.replace('permission_required.html');
         return;
