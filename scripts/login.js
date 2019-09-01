@@ -18,3 +18,12 @@ $('#authForm').submit(function (event) {
         }
     });
 });
+
+// $('#teamAuthForm').submit(function (event) {
+//     event.preventDefault();
+//     var teamNumber = $('#teamAuthForm input:first').val();
+//     sessionStorage.clear();
+//     sessionStorage.setItem('loggedTeam', teamNumber);
+//     sessionStorage.setItem('role', 'TEAM');
+//     location.replace('account.html');
+// });

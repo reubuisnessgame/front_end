@@ -1,4 +1,9 @@
 $(document).ready(() => {
+    if (sessionStorage.getItem('loggedTeam')) {
+        location.replace('page_team.html');
+        return;
+    }
+
     if (!sessionStorage.getItem('token')) {
         location.replace('auth_required.html');
         return;
